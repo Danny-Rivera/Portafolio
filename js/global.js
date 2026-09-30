@@ -1,13 +1,37 @@
+// Efecto de texto cambiante en el título del Hero
 document.addEventListener('DOMContentLoaded', () => {
-    // Destacar automáticamente la página activa en el menú de navegación
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const roles = ['UI/UX', 'Gráfico', 'de Marca', 'Web'];
+    const typingElement = document.getElementById('typing-text');
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
 
-    navLinks.forEach(link => {
-        if (link.getAttribute('href') === currentPath) {
-            link.classList.add('active');
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+        
+        if (isDeleting) {
+            typingElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+        } else {
+            typingElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
         }
-    });
 
-    console.log('Componentes globales cargados correctamente.');
+        let typeSpeed = isDeleting ? 80 : 150;
+
+        if (!isDeleting && charIndex === currentRole.length) {
+            typeSpeed = 2000; // Pausa cuando termina de escribir
+            isDeleting = true;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(typeEffect, typeSpeed);
+    }
+
+    if (typingElement) {
+        typeEffect();
+    }
 });
