@@ -1,17 +1,22 @@
-/* Estilos específicos de la Portada */
+/* ==========================================
+   ESTILOS RESPONSIVOS PARA LA PORTADA (home.css)
+   ========================================== */
+
 .home-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 3rem 1.5rem;
+    padding: 2rem 1.5rem;
 }
 
+/* HERO SECTION FLUIDO */
 .hero-creative {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
-    gap: 3rem;
-    min-height: 70vh;
-    padding: 2rem 0;
+    gap: 2.5rem;
+    min-height: calc(100vh - 120px);
+    padding: 1rem 0;
 }
 
 .badge {
@@ -25,11 +30,13 @@
     margin-bottom: 1rem;
 }
 
+/* Tipografía adaptable con clamp(min, preferido, max) */
 .hero-text h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
-    line-height: 1.1;
+    line-height: 1.15;
     margin-bottom: 0.5rem;
+    word-break: break-word;
 }
 
 .highlight-gradient {
@@ -39,20 +46,22 @@
 }
 
 .dynamic-title {
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
     color: #475569;
     margin-bottom: 1rem;
 }
 
 .hero-description {
-    font-size: 1.1rem;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
     color: #64748b;
     max-width: 500px;
     margin-bottom: 2rem;
 }
 
+/* BOTONES FLEXIBLES */
 .hero-buttons {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -62,6 +71,7 @@
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .btn-primary {
@@ -85,9 +95,11 @@
     color: #2563eb;
 }
 
+/* TARJETA VISUAL / AVATAR RESPONSIVO */
 .hero-visual {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .glass-card {
@@ -95,48 +107,58 @@
     backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 1.25rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     text-align: center;
     transition: transform 0.4s ease;
+    width: 100%;
+    max-width: 320px;
 }
 
 .glass-card:hover {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-6px) rotate(1deg);
+}
+
+.profile-avatar {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
 .profile-avatar img {
-    width: 260px;
-    height: 260px;
-    border-radius: 16px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .card-tag {
-    margin-top: 1rem;
+    margin-top: 0.8rem;
     font-weight: 600;
     color: #334155;
+    font-size: 0.95rem;
 }
 
+/* ESPECIALIDADES / SKILLS GRID */
 .featured-section {
-    margin-top: 5rem;
+    margin-top: 4rem;
 }
 
 .featured-section h3 {
-    font-size: 1.8rem;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 .skill-card {
     background: white;
-    padding: 2rem;
+    padding: 1.8rem;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
     transition: all 0.3s ease;
@@ -149,16 +171,54 @@
 }
 
 .skill-card .icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
 }
 
-@media (max-width: 768px) {
+/* ==========================================
+   MEDIA QUERIES (TABLETS Y MÓVILES)
+   ========================================== */
+
+/* Tablets y pantallas medianas (≤ 868px) */
+@media (max-width: 868px) {
     .hero-creative {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 2rem;
+        min-height: auto;
+        padding-top: 1.5rem;
     }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-buttons {
         justify-content: center;
+    }
+
+    .glass-card {
+        max-width: 280px;
+    }
+}
+
+/* Celulares pequeños (≤ 480px) */
+@media (max-width: 480px) {
+    .home-container {
+        padding: 1.25rem 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 }
