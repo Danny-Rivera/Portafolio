@@ -1,49 +1,84 @@
-<main class="home-container">
-    <!-- Hero Principal Dinámico -->
-    <section class="hero-creative">
-        <div class="hero-text">
-            <span class="badge">Disponible para proyectos</span>
-            <h1>Hola, soy <span class="highlight-gradient">Tu Nombre</span></h1>
-            <h2 class="dynamic-title">Diseñador <span id="typing-text">UI/UX</span></h2>
-            <p class="hero-description">
-                Apasionado por transformar ideas complejas en experiencias visuales memorables, funcionales e interactivas.
-            </p>
-            <div class="hero-buttons">
-                <a href="proyectos.html" class="btn btn-primary">Ver Portafolio</a>
-                <a href="contacto.html" class="btn btn-secondary">Contactar</a>
-            </div>
-        </div>
-        
-        <div class="hero-visual">
-            <div class="glass-card">
-                <div class="profile-avatar">
-                    <!-- Coloca tu foto o ilustración aquí -->
-                    <img src="assets/images/profile.jpg" alt="Foto de Perfil" onerror="this.src='https://via.placeholder.com/300x300?text=Tu+Foto'">
-                </div>
-                <div class="card-tag">Diseño Visual & Web</div>
-            </div>
-        </div>
-    </section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danny Rivera - Portafolio</title>
+    
+    <!-- CSS GLOBAL Y ESPECÍFICO -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
 
-    <!-- Galería Destacada Rápida -->
-    <section class="featured-section">
-        <h3>Especialidades</h3>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="icon">🎨</div>
-                <h4>Branding & ID</h4>
-                <p>Identidad visual, sistemas de diseño y logotipos estratégicos.</p>
+    <!-- Encabezado Global -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><strong>Portafolio</strong></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="home-container">
+        <section class="hero-creative">
+            <div class="hero-text">
+                <span class="badge">Disponible para proyectos</span>
+                <h1>Hola, soy <span class="highlight-gradient">Danny Rivera</span></h1>
+                <h2 class="dynamic-title">Diseñador <span id="typing-text">UI/UX</span></h2>
+                <p class="hero-description">
+                    Apasionado por transformar ideas complejas en experiencias visuales memorables, funcionales e interactivas.
+                </p>
+                <div class="hero-buttons">
+                    <a href="proyectos.html" class="btn btn-primary">Ver Portafolio</a>
+                    <a href="contacto.html" class="btn btn-secondary">Contactar</a>
+                </div>
             </div>
-            <div class="skill-card">
-                <div class="icon">💻</div>
-                <h4>UI / UX Design</h4>
-                <p>Prototipado, arquitectura de información y experiencias digitales.</p>
+            
+            <div class="hero-visual">
+                <div class="glass-card">
+                    <div class="profile-avatar">
+                        <img src="assets/images/profile.jpg" alt="Foto de Perfil" onerror="this.src='https://via.placeholder.com/300x300?text=Tu+Foto'">
+                    </div>
+                    <div class="card-tag">Diseño Visual & Web</div>
+                </div>
             </div>
-            <div class="skill-card">
-                <div class="icon">⚡</div>
-                <h4>Desarrollo Web</h4>
-                <p>Maquetación limpia en HTML, CSS y Javascript interactivo.</p>
+        </section>
+
+        <section class="featured-section">
+            <h3>Especialidades</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="icon">🎨</div>
+                    <h4>Branding & ID</h4>
+                    <p>Identidad visual, sistemas de diseño y logotipos estratégicos.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">💻</div>
+                    <h4>UI / UX Design</h4>
+                    <p>Prototipado, arquitectura de información y experiencias digitales.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">⚡</div>
+                    <h4>Desarrollo Web</h4>
+                    <p>Maquetación limpia en HTML, CSS y Javascript interactivo.</p>
+                </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
+
+    <!-- Pie de página Global -->
+    <footer>
+        <p>&copy; 2026 Danny Rivera. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/global.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>
