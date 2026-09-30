@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Danny Rivera</title>
+    
+    <!-- CSS Global y de Proyectos -->
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/projects.css">
+</head>
+<body>
+
+    <!-- Encabezado Global -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><strong>Portafolio</strong></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-mi.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contenido Principal de Proyectos -->
+    <main class="projects-container">
+        <section class="projects-header">
+            <span class="badge">Mi Trabajo</span>
+            <h1>Proyectos <span class="highlight-gradient">Destacados</span></h1>
+            <p class="subtitle">Una selección de mis mejores trabajos en Branding, UI/UX y Desarrollo Web.</p>
+        </section>
+
+        <!-- Filtros Dinámicos -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+            <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+        </div>
+
+        <!-- Galería de Proyectos (Grid) -->
+        <div class="projects-grid">
+            
+            <!-- Proyecto 1 -->
+            <article class="project-card" data-category="uiux">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/600x400?text=App+Redise%C3%B1o" alt="Rediseño App Móvil">
+                    <div class="card-overlay">
+                        <button class="open-modal-btn" data-modal="modal-1">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="tag">UI/UX Design</span>
+                    <h3>Rediseño App Bancaria</h3>
+                    <p>Mejora de la experiencia de usuario y flujo de transferencia para usuarios jóvenes.</p>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="project-card" data-category="branding">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/600x400?text=Identidad+Marca" alt="Identidad Visual Marca">
+                    <div class="card-overlay">
+                        <button class="open-modal-btn" data-modal="modal-2">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="tag">Branding</span>
+                    <h3>Identidad 'Café Lumbre'</h3>
+                    <p>Creación de marca, paleta de colores, tipografía y empaques artesanales.</p>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="project-card" data-category="web">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/600x400?text=Sitio+Web" alt="Desarrollo Sitio Web">
+                    <div class="card-overlay">
+                        <button class="open-modal-btn" data-modal="modal-3">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="tag">Desarrollo Web</span>
+                    <h3>Plataforma E-commerce</h3>
+                    <p>Maquetación responsiva en HTML/CSS y catálogo interactivo en JS.</p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Modal 1 (Detalle de Proyecto) -->
+    <div class="modal" id="modal-1">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Rediseño App Bancaria</h2>
+            <span class="tag">UI/UX Design</span>
+            <img src="https://via.placeholder.com/800x450?text=Caso+de+Estudio+1" alt="Caso de Estudio 1">
+            <div class="modal-body">
+                <h3>El Desafío</h3>
+                <p>El flujo previo requería 7 pasos para realizar una transferencia rápida.</p>
+                <h3>La Solución</h3>
+                <p>Rediseñamos la interfaz reduciendo el flujo a solo 3 pasos clave e integrando biometría.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página Global -->
+    <footer>
+        <p>&copy; 2026 Danny Rivera. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript Global y de Proyectos -->
+    <script src="js/global.js"></script>
+    <script src="js/projects.js"></script>
+</body>
+</html>
