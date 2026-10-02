@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danny Rivera - Portafolio</title>
+    <title>Danny Rivera - Diseñador Gráfico & Creador de Contenido</title>
     
-    <!-- Archivos CSS -->
+    <!-- CSS Global e Inicio -->
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 
-    <!-- Encabezado Global -->
+    <!-- ENCABEZADO (HEADER) -->
     <header>
         <nav class="navbar">
-            <a href="index.html" class="logo"><strong>Portafolio</strong></a>
+            <a href="index.html" class="logo"><strong>Danny Rivera</strong></a>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
                 <li><a href="sobre-mi.html">Sobre mí</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -24,61 +24,76 @@
         </nav>
     </header>
 
-    <!-- Contenido Principal -->
-    <main class="home-container">
-        <section class="hero-creative">
-            <div class="hero-text">
-                <span class="badge">Disponible para proyectos</span>
-                <h1>Hola, soy <span class="highlight-gradient">Danny Rivera</span></h1>
-                <h2 class="dynamic-title">Diseñador <span id="typing-text">UI/UX</span></h2>
-                <p class="hero-description">
-                    Apasionado por transformar ideas complejas en experiencias visuales memorables, funcionales e interactivas.
-                </p>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- Hero Section / Presentación Principal -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge">Portafolio 2026</span>
+                <h1>Diseño gráfico y <span class="highlight-gradient">contenido visual</span> para marcas</h1>
+                <p>Hola, soy <strong>Danny Rivera</strong>, diseñador gráfico basado en Managua, Nicaragua. Me especializo en branding, diseño para redes sociales, publicidad digital y gestión de contenido web.</p>
+                
                 <div class="hero-buttons">
-                    <a href="proyectos.html" class="btn btn-primary">Ver Portafolio</a>
+                    <a href="proyectos.html" class="btn btn-primary">Ver mis Trabajos</a>
                     <a href="contacto.html" class="btn btn-secondary">Contactar</a>
                 </div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="glass-card">
-                    <div class="profile-avatar">
-                        <img src="assets/images/profile.jpg" alt="Foto de Perfil" onerror="this.src='https://via.placeholder.com/300x300?text=Tu+Foto'">
-                    </div>
-                    <div class="card-tag">Diseño Visual & Web</div>
+        </section>
+
+        <!-- Resumen de Especialidades -->
+        <section class="services-section">
+            <h2>Especialidades <span class="highlight-gradient">Visuales</span></h2>
+            <div class="services-grid">
+                
+                <div class="service-card">
+                    <div class="icon">🎨</div>
+                    <h3>Diseño para Redes Sociales</h3>
+                    <p>Creación de publicaciones, piezas promocionales y stories en formatos verticales y horizontales enfocados en generar interacción.</p>
                 </div>
+
+                <div class="service-card">
+                    <div class="icon">📐</div>
+                    <h3>Branding e Identidad Visual</h3>
+                    <p>Desarrollo de logotipos, identidad corporativa y manuales de marca estructurados para empresas y emprendimientos.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">📖</div>
+                    <h3>Diseño Editorial & Impresos</h3>
+                    <p>Diagramación de revistas, afiches, catálogos y material publicitario impreso o digital.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="icon">🌐</div>
+                    <h3>Gestión Web en WordPress</h3>
+                    <p>Administración, diseño de banners y actualización de contenidos para sitios web corporativos.</p>
+                </div>
+
             </div>
         </section>
 
-        <section class="featured-section">
-            <h3>Especialidades</h3>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="icon">🎨</div>
-                    <h4>Branding & ID</h4>
-                    <p>Identidad visual, sistemas de diseño y logotipos estratégicos.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="icon">💻</div>
-                    <h4>UI / UX Design</h4>
-                    <p>Prototipado, arquitectura de información y experiencias digitales.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="icon">⚡</div>
-                    <h4>Desarrollo Web</h4>
-                    <p>Maquetación limpia en HTML, CSS y Javascript interactivo.</p>
-                </div>
+        <!-- Herramientas Principales -->
+        <section class="tools-summary">
+            <h2>Herramientas <span class="highlight-gradient">Principales</span></h2>
+            <div class="tools-list">
+                <span class="tool-tag">Adobe Photoshop</span>
+                <span class="tool-tag">Adobe Illustrator</span>
+                <span class="tool-tag">Adobe InDesign</span>
+                <span class="tool-tag">Adobe After Effects</span>
+                <span class="tool-tag">Meta Business Suite</span>
+                <span class="tool-tag">WordPress</span>
             </div>
         </section>
+
     </main>
 
-    <!-- Pie de página Global -->
+    <!-- PIE DE PÁGINA (FOOTER) -->
     <footer>
         <p>&copy; 2026 Danny Rivera. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Archivos JavaScript -->
+    <!-- JavaScript Global -->
     <script src="js/global.js"></script>
-    <script src="js/home.js"></script>
 </body>
 </html>
