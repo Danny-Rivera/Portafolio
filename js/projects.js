@@ -64,46 +64,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ==========================================
-   LÓGICA DE PROYECTOS Y CARRUSELES INDEPENDIENTES
+   LÓGICA DE PROYECTOS Y CARRUSELES DINÁMICOS
    ========================================== */
 
-// 1. Bancos de imágenes separados por cada proyecto/cliente
+// 1. Única lista donde colocarás las rutas de tus imágenes locales
 const imagesProject1 = [
-    "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/829324825_1723618456433416_2576177245379603620_n.jpg?...",
-    "https://via.placeholder.com/800x500?text=DEQ+Comercial+Imagen+2",
-    "https://via.placeholder.com/800x500?text=DEQ+Comercial+Imagen+3"
+    "RUTA_IMAGEN_DEQ_1_AQUI",
+    "RUTA_IMAGEN_DEQ_2_AQUI"
 ];
 
 const imagesProject2 = [
-    "https://via.placeholder.com/800x500?text=DoradoBet+Post+1",
-    "https://via.placeholder.com/800x500?text=DoradoBet+Post+2"
+    "RUTA_IMAGEN_DORADO_1_AQUI",
+    "RUTA_IMAGEN_DORADO_2_AQUI"
 ];
 
 const imagesProject3 = [
-    "https://via.placeholder.com/800x500?text=Ortiz+Arq+1",
-    "https://via.placeholder.com/800x500?text=Ortiz+Arq+2",
-    "https://via.placeholder.com/800x500?text=Ortiz+Arq+3"
+    "RUTA_IMAGEN_ORTIZ_1_AQUI",
+    "RUTA_IMAGEN_ORTIZ_2_AQUI"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Función auxiliar para asignar imagen aleatoria a la portada de una tarjeta
-    function setRandomCover(imgElementId, imagesArray) {
-        const coverImg = document.getElementById(imgElementId);
-        if (coverImg && imagesArray.length > 0) {
+    // Función para configurar cada proyecto (Portada aleatoria + Carrusel automático)
+    function setupProject(projectId, imagesArray) {
+        if (!imagesArray || imagesArray.length === 0) return;
+
+        // A. Asignar portada aleatoria a la tarjeta principal
+        const coverImg = document.getElementById(`cover-${projectId}`);
+        if (coverImg) {
             const randomIndex = Math.floor(Math.random() * imagesArray.length);
             coverImg.src = imagesArray[randomIndex];
         }
-    }
 
-    // Asignar portadas aleatorias al cargar
-    setRandomCover('cover-project-1', imagesProject1);
-    setRandomCover('cover-project-2', imagesProject2);
-    setRandomCover('cover-project-3', imagesProject3);
+        // B. Generar dinámicamente las imágenes del carrusel en el modal
+        const wrapper = document.getElementById(`carousel-wrapper-${projectId}`);
+        const indicatorsBox = document.getElementById(`carousel-indicators-${projectId}`);
+        
+        if (wrapper && indicatorsBox) {
+            wrapper.innerHTML = "";
+            indicatorsBox.innerHTML = "";
 
-    // Función genérica para inicializar carruseles dentro de los modales
-    function initCarousel(modalId) {
-        const modal = document.getElementById(modalId);
+            imagesArray.forEach((imgSrc, index) => {
+                // Crear imagen para el carrusel
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.className = index === 0 ? "carousel-img active" : "carousel-img";
+                img.alt = `Slide ${index + 1}`;
+                wrapper.appendChild(img);
+
+                // Crear indicador de punto
+                const indicator = document.createElement('span');
+                indicator.className = index === 0 ? "indicator active" : "indicator";
+                indicatorsBox.appendChild(indicator);
+            });
+        }
+
+        // C. Lógica de navegación del carrusel (Anterior / Siguiente)
+        const modal = document.getElementById(`modal-${projectId}`);
         if (!modal) return;
 
         const slides = modal.querySelectorAll('.carousel-img');
@@ -113,28 +130,31 @@ document.addEventListener('DOMContentLoaded', () => {
         let currentIndex = 0;
 
         function updateCarousel(index) {
-            slides.forEach(slide => slide.classList.remove('active'));
-            indicators.forEach(ind => ind.classList.remove('active'));
-            
-            slides[index].classList.add('active');
-            indicators[index].classList.add('active');
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('active', i === index);
+            });
         }
 
         if (nextBtn && prevBtn && slides.length > 0) {
-            nextBtn.addEventListener('click', () => {
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
                 currentIndex = (currentIndex + 1) % slides.length;
                 updateCarousel(currentIndex);
             });
 
-            prevBtn.addEventListener('click', () => {
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
                 currentIndex = (currentIndex - 1 + slides.length) % slides.length;
                 updateCarousel(currentIndex);
             });
         }
     }
 
-    // Inicializar el carrusel de cada proyecto por separado
-    initCarousel('modal-1');
-    initCarousel('modal-2');
-    initCarousel('modal-3');
+    // Inicializar cada proyecto con su ID numérico
+    setupProject('1', imagesProject1);
+    setupProject('2', imagesProject2);
+    setupProject('3', imagesProject3);
 });
