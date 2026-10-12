@@ -44,166 +44,92 @@
         <!-- Galería de Proyectos (Grid) -->
         <div class="projects-grid">
             
-            <!-- Proyecto 1: DEQ Comercial -->
+            <!-- Proyecto Único de Diseño de Posts (Con Portada Aleatoria) -->
             <article class="project-card" data-category="posts">
                 <div class="card-image">
-                    <img src="https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/829324825_1723618456433416_2576177245379603620_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oO16ZF9qHG0Q7kNvwHN6L8r&_nc_oc=Adp_EzTbkTcsFROCu_d-pW1lP0kbuw7PwgT17YofiuS295zmnoRvDxRmLRmcvS3HdS0&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=WbNvmRZvVBSWlLP2jUMK8g&_nc_ss=7b2a8&oh=00_AQNtEz3JW-Sd3KzKKzBPE4jrPaC79XnJ7rGZ8hD1Qv_2DQ&oe=6AD2CAE0" alt="Diseño de Posts DEQ Comercial">
+                    <!-- La imagen se asignará aleatoriamente por JavaScript -->
+                    <img id="random-cover-img" src="" alt="Diseño de Posts - Danny Rivera">
                     <div class="card-overlay">
-                        <button class="open-modal-btn" data-modal="modal-1">Ver Proyecto</button>
+                        <button class="open-modal-btn" data-modal="modal-posts">Ver Todos los Posts</button>
                     </div>
                 </div>
                 <div class="card-content">
                     <span class="tag">Diseño de Post</span>
-                    <h3>Campañas Digitales - DEQ Comercial S.A.</h3>
-                    <p>Creación de contenido visual para redes sociales corporativas enfocado en soluciones de limpieza e higiene.</p>
+                    <h3>Galería de Contenido para Redes Sociales</h3>
+                    <p>Colección de publicaciones, campañas digitales y piezas gráficas orientadas a la interacción y promoción de marcas.</p>
                 </div>
             </article>
 
-            <!-- Proyecto 2: DoradoBet -->
-            <article class="project-card" data-category="posts">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=DoradoBet+Destacados" alt="Banners Deportivos DoradoBet">
-                    <div class="card-overlay">
-                        <button class="open-modal-btn" data-modal="modal-2">Ver Proyecto</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <span class="tag">Diseño de Post</span>
-                    <h3>Publicidad y Deportes - DoradoBet</h3>
-                    <p>Diseño de piezas gráficas horizontales y verticales para pantallas LED y redes sociales con cuotas deportivas.</p>
-                </div>
-            </article>
-
-            <!-- Proyecto 3: Ortiz Arquitectos -->
-            <article class="project-card" data-category="posts">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=Ortiz+Arquitectos" alt="Consejos de Diseño Arquitectura">
-                    <div class="card-overlay">
-                        <button class="open-modal-btn" data-modal="modal-3">Ver Proyecto</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <span class="tag">Diseño de Post</span>
-                    <h3>Consejos de Diseño - Ortiz Arquitectos</h3>
-                    <p>Publicaciones informativas e interactivas para Facebook e Instagram sobre arquitectura y diseño de interiores.</p>
-                </div>
-            </article>
-
-            <!-- Proyecto 4: Branding Granada -->
+            <!-- Proyecto de Branding -->
             <article class="project-card" data-category="branding">
                 <div class="card-image">
                     <img src="https://via.placeholder.com/600x400?text=Manual+Granada+500" alt="Branding Granada 500 Años">
                     <div class="card-overlay">
-                        <button class="open-modal-btn" data-modal="modal-4">Ver Proyecto</button>
+                        <button class="open-modal-btn" data-modal="modal-branding">Ver Proyecto</button>
                     </div>
                 </div>
                 <div class="card-content">
                     <span class="tag">Branding</span>
                     <h3>Manual de Marca - Granada 500 Años</h3>
-                    <p>Identidad visual y manual de marca conmemorativo por el 500 aniversario de la fundación de Granada, Nicaragua.</p>
-                </div>
-            </article>
-
-            <!-- Proyecto 5: Diseño Editorial -->
-            <article class="project-card" data-category="editorial">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=Revista+Colonial" alt="Diseño Editorial Iglesias Coloniales">
-                    <div class="card-overlay">
-                        <button class="open-modal-btn" data-modal="modal-5">Ver Proyecto</button>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <span class="tag">Editorial</span>
-                    <h3>Revista Cultural - Iglesias Coloniales</h3>
-                    <p>Diseño y diagramación de revista cultural enfocada en la arquitectura e historia de las iglesias coloniales.</p>
+                    <p>Identidad visual y manual de marca conmemorativo por el 500 aniversario.</p>
                 </div>
             </article>
 
         </div>
     </main>
 
-    <!-- VENTANAS MODALES (CASOS DE ESTUDIO CON SUS RESPECTIVAS IMÁGENES REALES) -->
-
-    <!-- Modal 1 -->
-    <div class="modal" id="modal-1">
-        <div class="modal-content">
+    <!-- VENTANA MODAL CON CARRUSEL DE POSTS -->
+    <div class="modal" id="modal-posts">
+        <div class="modal-content modal-carousel-container">
             <button class="close-modal">&times;</button>
-            <h2>Campañas Digitales - DEQ Comercial S.A.</h2>
+            <h2>Galería de Posts para Redes Sociales</h2>
             <span class="tag">Diseño de Post</span>
-            <img src="https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/829324825_1723618456433416_2576177245379603620_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x2048&ctp=s2048x2048&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=oO16ZF9qHG0Q7kNvwHN6L8r&_nc_oc=Adp_EzTbkTcsFROCu_d-pW1lP0kbuw7PwgT17YofiuS295zmnoRvDxRmLRmcvS3HdS0&_nc_zt=23&_nc_ht=scontent-mia5-2.xx&_nc_gid=WbNvmRZvVBSWlLP2jUMK8g&_nc_ss=7b2a8&oh=00_AQNtEz3JW-Sd3KzKKzBPE4jrPaC79XnJ7rGZ8hD1Qv_2DQ&oe=6AD2CAE0" alt="Detalle DEQ Comercial">
+            
+            <!-- CONTENEDOR DEL CARRUSEL -->
+            <div class="carousel-box">
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                
+                <div class="carousel-slide-wrapper">
+                    <img class="carousel-img active" src="https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/829324825_1723618456433416_2576177245379603620_n.jpg?..." alt="Post 1">
+                    <img class="carousel-img" src="https://via.placeholder.com/800x500?text=Post+Deportivo+DoradoBet" alt="Post 2">
+                    <img class="carousel-img" src="https://via.placeholder.com/800x500?text=Consejos+Arquitectura+Ortiz" alt="Post 3">
+                </div>
+
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+
+            <div class="carousel-indicators">
+                <span class="indicator active"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+            </div>
+
             <div class="modal-body">
-                <h3>El Enfoque</h3>
-                <p>Desarrollo de piezas gráficas orientadas a comunicar las soluciones de limpieza de la empresa, manteniendo la identidad corporativa y captando la atención de la audiencia en plataformas digitales.</p>
-                <h3>Resultados</h3>
-                <p>Publicaciones dinámicas adaptadas tanto para la interacción en redes sociales como para formatos informativos de productos nuevos.</p>
+                <h3>Detalles de la Colección</h3>
+                <p>Piezas gráficas diseñadas para optimizar la comunicación de marcas en plataformas digitales, manteniendo dinamismo visual y adaptabilidad a formatos de pantalla.</p>
             </div>
         </div>
     </div>
 
-    <!-- Modal 2 -->
-    <div class="modal" id="modal-2">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h2>Publicidad y Deportes - DoradoBet</h2>
-            <span class="tag">Diseño de Post</span>
-            <img src="https://via.placeholder.com/800x450?text=DoradoBet+Detalle" alt="Detalle DoradoBet">
-            <div class="modal-body">
-                <h3>El Enfoque</h3>
-                <p>Creación de contenido visual de alta visibilidad para eventos y partidos destacados, integrando cuotas, horarios y elementos gráficos atractivos.</p>
-                <h3>Adaptabilidad</h3>
-                <p>Diseño de banners optimizados tanto en formatos horizontales para pantallas y TVs como en formatos verticales para historias en redes sociales.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 3 -->
-    <div class="modal" id="modal-3">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h2>Consejos de Diseño - Ortiz Arquitectos</h2>
-            <span class="tag">Diseño de Post</span>
-            <img src="https://via.placeholder.com/800x450?text=Ortiz+Arquitectos+Detalle" alt="Detalle Ortiz Arquitectos">
-            <div class="modal-body">
-                <h3>El Enfoque</h3>
-                <p>Diseño de publicaciones orientadas al valor (consejos de aprovechamiento solar y conexiones visuales) para posicionar a la marca en Facebook e Instagram.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="modal" id="modal-4">
+    <!-- Modal de Branding -->
+    <div class="modal" id="modal-branding">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
             <h2>Manual de Marca - Granada 500 Años</h2>
             <span class="tag">Branding</span>
-            <img src="https://via.placeholder.com/800x450?text=Granada+500+Detalle" alt="Detalle Granada 500">
+            <img src="https://via.placeholder.com/800x450?text=Granada+Detalle" alt="Detalle Branding">
             <div class="modal-body">
-                <h3>El Enfoque</h3>
-                <p>Creación de identidad visual corporativa y manual de marca institucional bajo el lema "Una historia llena de orgullo".</p>
+                <p>Creación de identidad visual corporativa institucional.</p>
             </div>
         </div>
     </div>
 
-    <!-- Modal 5 -->
-    <div class="modal" id="modal-5">
-        <div class="modal-content">
-            <button class="close-modal">&times;</button>
-            <h2>Revista Cultural - Iglesias Coloniales</h2>
-            <span class="tag">Editorial</span>
-            <img src="https://via.placeholder.com/800x450?text=Revista+Editorial+Detalle" alt="Detalle Revista Editorial">
-            <div class="modal-body">
-                <h3>El Enfoque</h3>
-                <p>Diagramación y diseño editorial de una publicación enfocada en la arquitectura, historia y valor patrimonial de las iglesias coloniales de Granada.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- PIE DE PÁGINA (FOOTER) -->
+    <!-- PIE DE PÁGINA -->
     <footer>
         <p>&copy; 2026 Danny Rivera. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- JavaScript Global y de Proyectos -->
+    <!-- Scripts Externos -->
     <script src="js/global.js"></script>
     <script src="js/projects.js"></script>
 </body>
