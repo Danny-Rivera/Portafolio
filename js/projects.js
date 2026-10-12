@@ -61,50 +61,80 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+
 /* ==========================================
-   LÓGICA DE PROYECTOS Y CARRUSEL (PROJECTS.JS)
+   LÓGICA DE PROYECTOS Y CARRUSELES INDEPENDIENTES
    ========================================== */
 
-// Lista de enlaces de imágenes de tus posts para el banner aleatorio y el carrusel
-const postImages = [
+// 1. Bancos de imágenes separados por cada proyecto/cliente
+const imagesProject1 = [
     "https://scontent-mia5-2.xx.fbcdn.net/v/t39.30808-6/829324825_1723618456433416_2576177245379603620_n.jpg?...",
-    "https://via.placeholder.com/800x500?text=Post+Deportivo+DoradoBet",
-    "https://via.placeholder.com/800x500?text=Consejos+Arquitectura+Ortiz"
+    "https://via.placeholder.com/800x500?text=DEQ+Comercial+Imagen+2",
+    "https://via.placeholder.com/800x500?text=DEQ+Comercial+Imagen+3"
+];
+
+const imagesProject2 = [
+    "https://via.placeholder.com/800x500?text=DoradoBet+Post+1",
+    "https://via.placeholder.com/800x500?text=DoradoBet+Post+2"
+];
+
+const imagesProject3 = [
+    "https://via.placeholder.com/800x500?text=Ortiz+Arq+1",
+    "https://via.placeholder.com/800x500?text=Ortiz+Arq+2",
+    "https://via.placeholder.com/800x500?text=Ortiz+Arq+3"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. SELECCIÓN ALEATORIA PARA LA PORTADA PRINCIPAL
-    const randomImgElement = document.getElementById('random-cover-img');
-    if(randomImgElement) {
-        const randomIndex = Math.floor(Math.random() * postImages.length);
-        randomImgElement.src = postImages[randomIndex];
+
+    // Función auxiliar para asignar imagen aleatoria a la portada de una tarjeta
+    function setRandomCover(imgElementId, imagesArray) {
+        const coverImg = document.getElementById(imgElementId);
+        if (coverImg && imagesArray.length > 0) {
+            const randomIndex = Math.floor(Math.random() * imagesArray.length);
+            coverImg.src = imagesArray[randomIndex];
+        }
     }
 
-    // 2. LÓGICA DEL CARRUSEL (ANTERIOR, SIGUIENTE Y BUCLE INFINITO)
-    const slides = document.querySelectorAll('.carousel-img');
-    const indicators = document.querySelectorAll('.indicator');
-    const nextBtn = document.querySelector('.next-btn');
-    const prevBtn = document.querySelector('.prev-btn');
-    let currentIndex = 0;
+    // Asignar portadas aleatorias al cargar
+    setRandomCover('cover-project-1', imagesProject1);
+    setRandomCover('cover-project-2', imagesProject2);
+    setRandomCover('cover-project-3', imagesProject3);
 
-    function updateCarousel(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(ind => ind.classList.remove('active'));
-        
-        slides[index].classList.add('active');
-        indicators[index].classList.add('active');
+    // Función genérica para inicializar carruseles dentro de los modales
+    function initCarousel(modalId) {
+        const modal = document.getElementById(modalId);
+        if (!modal) return;
+
+        const slides = modal.querySelectorAll('.carousel-img');
+        const indicators = modal.querySelectorAll('.indicator');
+        const nextBtn = modal.querySelector('.next-btn');
+        const prevBtn = modal.querySelector('.prev-btn');
+        let currentIndex = 0;
+
+        function updateCarousel(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
+
+        if (nextBtn && prevBtn && slides.length > 0) {
+            nextBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slides.length;
+                updateCarousel(currentIndex);
+            });
+
+            prevBtn.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateCarousel(currentIndex);
+            });
+        }
     }
 
-    if(nextBtn && prevBtn && slides.length > 0) {
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % slides.length; // Vuelve al inicio al llegar al final
-            updateCarousel(currentIndex);
-        });
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Va al último si está en el primero
-            updateCarousel(currentIndex);
-        });
-    }
+    // Inicializar el carrusel de cada proyecto por separado
+    initCarousel('modal-1');
+    initCarousel('modal-2');
+    initCarousel('modal-3');
 });
