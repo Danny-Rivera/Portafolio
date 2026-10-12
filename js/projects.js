@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // 1. Única lista donde colocarás las rutas de tus imágenes locales
 const imagesProject1 = [
-    "RUTA_IMAGEN_DEQ_1_AQUI",
+    "images/Dispensadores dobles en baño moderno.wepb",
     "RUTA_IMAGEN_DEQ_2_AQUI"
 ];
 
