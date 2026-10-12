@@ -11,101 +11,131 @@
 </head>
 <body>
 
-    <!-- Encabezado Global -->
+    <!-- ENCABEZADO (HEADER) -->
     <header>
         <nav class="navbar">
-            <a href="index.html" class="logo"><strong>Portafolio</strong></a>
+            <a href="index.html" class="logo"><strong>Danny Rivera</strong></a>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="sobre-mi.html">Sobre mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="proyectos.html" class="active">Proyectos</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Contenido Principal de Proyectos -->
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="projects-container">
+        
         <section class="projects-header">
-            <span class="badge">Mi Trabajo</span>
-            <h1>Proyectos <span class="highlight-gradient">Destacados</span></h1>
-            <p class="subtitle">Una selección de mis mejores trabajos en Branding, UI/UX y Desarrollo Web.</p>
+            <span class="badge">Casos de Estudio</span>
+            <h1>Mis <span class="highlight-gradient">Proyectos</span></h1>
+            <p class="subtitle">Explora una selección de mis trabajos en diseño gráfico, creación de contenido para redes sociales y branding.</p>
         </section>
 
-        <!-- Filtros Dinámicos -->
+        <!-- Filtros de Categorías -->
         <div class="filter-buttons">
             <button class="filter-btn active" data-filter="all">Todos</button>
-            <button class="filter-btn" data-filter="uiux">UI/UX</button>
+            <button class="filter-btn" data-filter="posts">Diseño de Post</button>
             <button class="filter-btn" data-filter="branding">Branding</button>
-            <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+            <button class="filter-btn" data-filter="editorial">Editorial</button>
         </div>
 
         <!-- Galería de Proyectos (Grid) -->
-     <!-- Galería de Proyectos (Grid) -->
         <div class="projects-grid">
             
-            <!-- Proyecto 1 -->
-            <article class="project-card" data-category="uiux">
+            <!-- Proyecto 1: DEQ Comercial -->
+            <article class="project-card" data-category="posts">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=App+Redise%C3%B1o" alt="Rediseño App Móvil">
+                    <img src="https://via.placeholder.com/600x400?text=DEQ+Comercial+Posts" alt="Diseño de Posts DEQ Comercial">
                     <div class="card-overlay">
                         <button class="open-modal-btn" data-modal="modal-1">Ver Proyecto</button>
                     </div>
                 </div>
                 <div class="card-content">
-                    <span class="tag">UI/UX Design</span>
-                    <h3>Rediseño App Bancaria</h3>
-                    <p>Mejora de la experiencia de usuario y flujo de transferencia para usuarios jóvenes.</p>
+                    <span class="tag">Diseño de Post</span>
+                    <h3>Campañas Digitales - DEQ Comercial S.A.</h3>
+                    <p>Creación de contenido visual para redes sociales corporativas enfocado en soluciones de limpieza e higiene[cite: 3].</p>
                 </div>
             </article>
 
-            <!-- Proyecto 2 -->
-            <article class="project-card" data-category="branding">
+            <!-- Proyecto 2: DoradoBet -->
+            <article class="project-card" data-category="posts">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=Identidad+Marca" alt="Identidad Visual Marca">
+                    <img src="https://via.placeholder.com/600x400?text=DoradoBet+Destacados" alt="Banners Deportivos DoradoBet">
                     <div class="card-overlay">
                         <button class="open-modal-btn" data-modal="modal-2">Ver Proyecto</button>
                     </div>
                 </div>
                 <div class="card-content">
-                    <span class="tag">Branding</span>
-                    <h3>Identidad 'Café Lumbre'</h3>
-                    <p>Creación de marca, paleta de colores, tipografía y empaques artesanales.</p>
+                    <span class="tag">Diseño de Post</span>
+                    <h3>Publicidad y Deportes - DoradoBet</h3>
+                    <p>Diseño de piezas gráficas horizontales y verticales para pantallas LED y redes sociales con cuotas deportivas[cite: 4, 5].</p>
                 </div>
             </article>
 
-            <!-- Proyecto 3 -->
-            <article class="project-card" data-category="web">
+            <!-- Proyecto 3: Ortiz Arquitectos -->
+            <article class="project-card" data-category="posts">
                 <div class="card-image">
-                    <img src="https://via.placeholder.com/600x400?text=Sitio+Web" alt="Desarrollo Sitio Web">
+                    <img src="https://via.placeholder.com/600x400?text=Ortiz+Arquitectos" alt="Consejos de Diseño Arquitectura">
                     <div class="card-overlay">
                         <button class="open-modal-btn" data-modal="modal-3">Ver Proyecto</button>
                     </div>
                 </div>
                 <div class="card-content">
-                    <span class="tag">Desarrollo Web</span>
-                    <h3>Plataforma E-commerce</h3>
-                    <p>Maquetación responsiva en HTML/CSS y catálogo interactivo en JS.</p>
+                    <span class="tag">Diseño de Post</span>
+                    <h3>Consejos de Diseño - Ortiz Arquitectos</h3>
+                    <p>Publicaciones informativas e interactivas para Facebook e Instagram sobre arquitectura y diseño de interiores[cite: 6].</p>
+                </div>
+            </article>
+
+            <!-- Proyecto 4: Branding Granada -->
+            <article class="project-card" data-category="branding">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/600x400?text=Manual+Granada+500" alt="Branding Granada 500 Años">
+                    <div class="card-overlay">
+                        <button class="open-modal-btn" data-modal="modal-4">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="tag">Branding</span>
+                    <h3>Manual de Marca - Granada 500 Años</h3>
+                    <p>Identidad visual y manual de marca conmemorativo por el 500 aniversario de la fundación de Granada, Nicaragua[cite: 7].</p>
+                </div>
+            </article>
+
+            <!-- Proyecto 5: Diseño Editorial -->
+            <article class="project-card" data-category="editorial">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/600x400?text=Revista+Colonial" alt="Diseño Editorial Iglesias Coloniales">
+                    <div class="card-overlay">
+                        <button class="open-modal-btn" data-modal="modal-5">Ver Proyecto</button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="tag">Editorial</span>
+                    <h3>Revista Cultural - Iglesias Coloniales</h3>
+                    <p>Diseño y diagramación de revista cultural enfocada en la arquitectura e historia de las iglesias coloniales[cite: 8].</p>
                 </div>
             </article>
 
         </div>
     </main>
 
-    <!-- VENTANAS MODALES (AQUÍ AGREGAS ESTOS TRES BLOQUES) -->
+    <!-- VENTANAS MODALES (CASOS DE ESTUDIO) -->
 
     <!-- Modal 1 -->
     <div class="modal" id="modal-1">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
-            <h2>Rediseño App Bancaria</h2>
-            <span class="tag">UI/UX Design</span>
-            <img src="https://via.placeholder.com/800x450?text=Caso+de+Estudio+1" alt="Caso de Estudio 1">
+            <h2>Campañas Digitales - DEQ Comercial S.A.</h2>
+            <span class="tag">Diseño de Post</span>
+            <img src="https://via.placeholder.com/800x450?text=DEQ+Comercial+Detalle" alt="Detalle DEQ Comercial">
             <div class="modal-body">
-                <h3>El Desafío</h3>
-                <p>El flujo previo requería 7 pasos para realizar una transferencia rápida.</p>
-                <h3>La Solución</h3>
-                <p>Rediseñamos la interfaz reduciendo el flujo a solo 3 pasos clave e integrando biometría.</p>
+                <h3>El Enfoque</h3>
+                <p>Desarrollo de piezas gráficas orientadas a comunicar las soluciones de limpieza de la empresa, manteniendo la identidad corporativa y captando la atención de la audiencia en plataformas digitales[cite: 3].</p>
+                <h3>Resultados</h3>
+                <p>Publicaciones dinámicas adaptadas tanto para la interacción en redes sociales como para formatos informativos de productos nuevos[cite: 3].</p>
             </div>
         </div>
     </div>
@@ -114,14 +144,14 @@
     <div class="modal" id="modal-2">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
-            <h2>Identidad 'Café Lumbre'</h2>
-            <span class="tag">Branding</span>
-            <img src="https://via.placeholder.com/800x450?text=Caso+de+Estudio+2" alt="Caso de Estudio 2">
+            <h2>Publicidad y Deportes - DoradoBet</h2>
+            <span class="tag">Diseño de Post</span>
+            <img src="https://via.placeholder.com/800x450?text=DoradoBet+Detalle" alt="Detalle DoradoBet">
             <div class="modal-body">
-                <h3>El Desafío</h3>
-                <p>Crear una identidad visual memorable para una marca de café artesanal emergente.</p>
-                <h3>La Solución</h3>
-                <p>Diseño de logotipo, empaques ecológicos y paleta cromática basada en tonos cálidos y orgánicos.</p>
+                <h3>El Enfoque</h3>
+                <p>Creación de contenido visual de alta visibilidad para eventos y partidos destacados, integrando cuotas, horarios y elementos gráficos atractivos[cite: 4, 5].</p>
+                <h3>Adaptabilidad</h3>
+                <p>Diseño de banners optimizados tanto en formatos horizontales para pantallas y TVs como en formatos verticales para historias en redes sociales[cite: 5].</p>
             </div>
         </div>
     </div>
@@ -130,36 +160,45 @@
     <div class="modal" id="modal-3">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
-            <h2>Plataforma E-commerce</h2>
-            <span class="tag">Desarrollo Web</span>
-            <img src="https://via.placeholder.com/800x450?text=Caso+de+Estudio+3" alt="Caso de Estudio 3">
+            <h2>Consejos de Diseño - Ortiz Arquitectos</h2>
+            <span class="tag">Diseño de Post</span>
+            <img src="https://via.placeholder.com/800x450?text=Ortiz+Arquitectos+Detalle" alt="Detalle Ortiz Arquitectos">
             <div class="modal-body">
-                <h3>El Desafío</h3>
-                <p>Desarrollar una tienda en línea rápida, accesible y fácil de navegar desde teléfonos móviles.</p>
-                <h3>La Solución</h3>
-                <p>Maquetación semántica en HTML5/CSS3 con catálogo dinámico y carrito interactivo implementado en JavaScript puro.</p>
+                <h3>El Enfoque</h3>
+                <p>Diseño de publicaciones orientadas al valor (consejos de aprovechamiento solar y conexiones visuales) para posicionar a la marca en Facebook e Instagram[cite: 6].</p>
             </div>
         </div>
     </div>
-    </main>
 
-    <!-- Modal 1 (Detalle de Proyecto) -->
-    <div class="modal" id="modal-1">
+    <!-- Modal 4 -->
+    <div class="modal" id="modal-4">
         <div class="modal-content">
             <button class="close-modal">&times;</button>
-            <h2>Rediseño App Bancaria</h2>
-            <span class="tag">UI/UX Design</span>
-            <img src="https://via.placeholder.com/800x450?text=Caso+de+Estudio+1" alt="Caso de Estudio 1">
+            <h2>Manual de Marca - Granada 500 Años</h2>
+            <span class="tag">Branding</span>
+            <img src="https://via.placeholder.com/800x450?text=Granada+500+Detalle" alt="Detalle Granada 500">
             <div class="modal-body">
-                <h3>El Desafío</h3>
-                <p>El flujo previo requería 7 pasos para realizar una transferencia rápida.</p>
-                <h3>La Solución</h3>
-                <p>Rediseñamos la interfaz reduciendo el flujo a solo 3 pasos clave e integrando biometría.</p>
+                <h3>El Enfoque</h3>
+                <p>Creación de identidad visual corporativa y manual de marca institucional bajo el lema "Una historia llena de orgullo"[cite: 7].</p>
             </div>
         </div>
     </div>
 
-    <!-- Pie de página Global -->
+    <!-- Modal 5 -->
+    <div class="modal" id="modal-5">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Revista Cultural - Iglesias Coloniales</h2>
+            <span class="tag">Editorial</span>
+            <img src="https://via.placeholder.com/800x450?text=Revista+Editorial+Detalle" alt="Detalle Revista Editorial">
+            <div class="modal-body">
+                <h3>El Enfoque</h3>
+                <p>Diagramación y diseño editorial de una publicación enfocada en la arquitectura, historia y valor patrimonial de las iglesias coloniales de Granada[cite: 8].</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
     <footer>
         <p>&copy; 2026 Danny Rivera. Todos los derechos reservados.</p>
     </footer>
