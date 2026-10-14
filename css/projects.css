@@ -275,68 +275,50 @@
 
 
 /* ==========================================
-   ESTILOS ADAPTABLES PARA TARJETAS Y CARRUSEL
+   AJUSTES DE CARRUSEL (TAMAÑO COMPUTADORA Y FLECHAS AFUERA)
    ========================================== */
 
-.card-image {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    overflow: hidden;
-    background-color: #f1f5f9;
-    position: relative;
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
+/* 1. Ampliar el modal en pantallas de computadora */
 .modal-carousel-container {
-    max-width: 700px;
-    width: 90%;
+    max-width: 900px; /* Tamaño más amplio para PC */
+    width: 92%;
+    padding: 25px 35px; /* Espacio interno adecuado */
 }
 
+/* 2. Contenedor del carrusel con margen lateral para las flechas fuera */
 .carousel-box {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 15px 0;
+    margin: 20px auto 10px;
     background: transparent;
-    width: 100%;
+    width: calc(100% - 90px); /* Deja espacio a los lados para las flechas */
     border-radius: 12px;
-    overflow: hidden;
 }
 
-.carousel-slide-wrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Se adapta a la proporción original de cada post (cuadrado, vertical u horizontal) */
+/* 3. La imagen se ajusta completamente sin cortarse */
 .carousel-img {
     display: none;
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     height: auto;
-    max-height: 65vh;
+    max-height: 70vh; /* Se asegura de que se vea completa verticalmente */
     object-fit: contain;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 .carousel-img.active {
     display: block;
 }
 
-/* Botones flotantes del carrusel */
+/* 4. Flechas posicionadas por FUERA de la imagen */
 .carousel-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(15, 23, 42, 0.65);
+    background: #1e293b; /* Color visible y sólido */
     color: #ffffff;
     border: none;
     font-size: 1.2rem;
@@ -348,34 +330,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .carousel-btn:hover {
-    background: rgba(37, 99, 235, 0.9);
-}
-
-.prev-btn { left: 10px; }
-.next-btn { right: 10px; }
-
-/* Indicadores */
-.carousel-indicators {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-bottom: 15px;
-}
-
-.indicator {
-    width: 8px;
-    height: 8px;
-    background: #cbd5e1;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.indicator.active {
     background: #2563eb;
-    width: 22px;
-    border-radius: 4px;
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* Posiciones fuera de la caja contenedora de la imagen */
+.prev-btn { 
+    left: -48px; 
+}
+
+.next-btn { 
+    right: -48px; 
+}
+
+/* 5. Ajuste especial para celulares (flechas más pegadas en móviles) */
+@media (max-width: 600px) {
+    .carousel-box {
+        width: 100%;
+    }
+    
+    .prev-btn { 
+        left: 5px; 
+    }
+    
+    .next-btn { 
+        right: 5px; 
+    }
 }
