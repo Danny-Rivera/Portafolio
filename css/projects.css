@@ -348,17 +348,34 @@
     right: -48px; 
 }
 
-/* 5. Ajuste especial para celulares (flechas más pegadas en móviles) */
+
+/* Ajuste optimizado para celulares */
+
+
 @media (max-width: 600px) {
     .carousel-box {
         width: 100%;
     }
-    
+
+    .carousel-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+        background: rgba(15, 23, 42, 0.25); /* Opacidad reducida para no robar protagonismo */
+        backdrop-filter: blur(2px);          /* Sutil desenfoque de fondo */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .carousel-btn:hover {
+        background: rgba(37, 99, 235, 0.7);
+    }
+
+    /* Pegadas a los bordes exactos */
     .prev-btn { 
-        left: 5px; 
+        left: 2px; 
     }
     
     .next-btn { 
-        right: 5px; 
+        right: 2px; 
     }
 }
