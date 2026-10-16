@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const imagesProject1 = [
     "images/dispensadores_dobles_en_baño_moderno.webp",
     "images/desinfeccion_moderna_del_baño.webp",
-    "images/cubo_amarillo_de_fregona_profecional.webp"
+    "images/cubo_amarillo_de_fregona_profesional.webp"
 ];
 
 const imagesProject2 = [
