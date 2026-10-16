@@ -274,196 +274,101 @@
 
 
 /* ==========================================
-
    ESTILOS ADAPTABLES PARA TARJETAS Y CARRUSEL
-
    ========================================== */
 
-
-
 .card-image {
-
     width: 100%;
-
     aspect-ratio: 16 / 9;
-
     overflow: hidden;
-
     background-color: #f1f5f9;
-
     position: relative;
-
 }
-
-
 
 .card-image img {
-
     width: 100%;
-
     height: 100%;
-
     object-fit: cover;
-
     display: block;
-
 }
-
-
 
 /* 1. Modal más ancho en computadoras */
-
 .modal-carousel-container {
-
     max-width: 900px;
-
     width: 92%;
-
     padding: 25px 35px;
-
 }
 
-
-
-/* 2. Caja contenedora con espacio a los lados para las flechas */
-
+/* 2. Caja contenedora adaptada para mostrar la imagen completa */
 .carousel-box {
-
     position: relative;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     margin: 20px auto 10px;
-
     background: transparent;
-
-    width: calc(100% - 90px);
-
+    width: 100%; /* Cambiado a 100% para que no recorte los lados de la imagen */
     border-radius: 12px;
-
 }
-
-
 
 .carousel-slide-wrapper {
-
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 }
 
-
-
-/* 3. Se adapta a cualquier proporción (cuadrada, vertical u horizontal) */
-
+/* 3. Se adapta a cualquier proporción (cuadrada, vertical u horizontal) sin recortes */
 .carousel-img {
-
     display: none;
-
     width: auto;
-
     max-width: 100%;
-
     height: auto;
-
     max-height: 70vh;
-
     object-fit: contain;
-
     border-radius: 8px;
-
     margin: 0 auto;
-
 }
-
-
 
 .carousel-img.active {
-
     display: block;
-
 }
 
-
-
-/* 4. Flechas posicionadas por FUERA de la imagen */
-
+/* 4. Flechas posicionadas por FUERA de la imagen en PC */
 .carousel-btn {
-
     position: absolute;
-
     top: 50%;
-
     transform: translateY(-50%);
-
     background: #1e293b;
-
     color: #ffffff;
-
     border: none;
-
     font-size: 1.2rem;
-
     width: 40px;
-
     height: 40px;
-
     cursor: pointer;
-
     z-index: 10;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     transition: background 0.3s ease, transform 0.2s ease;
-
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-
 }
-
-
 
 .carousel-btn:hover {
-
     background: #2563eb;
-
     transform: translateY(-50%) scale(1.08);
-
 }
 
-
-
-.prev-btn {
-
-    left: -48px;
-
+.prev-btn { 
+    left: -48px; 
 }
 
-
-
-.next-btn {
-
-    right: -48px;
-
+.next-btn { 
+    right: -48px; 
 }
 
-
-
-/* 5. Ajuste para celulares (flechas sutiles y semitransparentes) */
+/* 5. Ajuste para celulares (flechas sutiles y semitransparentes en los bordes) */
 @media (max-width: 600px) {
     .carousel-box {
         width: 100%;
@@ -473,7 +378,7 @@
         width: 32px;
         height: 32px;
         font-size: 0.9rem;
-        background: rgba(15, 23, 42, 0.35); /* Opacidad mucho más baja para no robar protagonismo */
+        background: rgba(15, 23, 42, 0.35);
         box-shadow: none;
     }
 
@@ -486,47 +391,24 @@
     }
 }
 
-
-
 /* Indicadores */
-
 .carousel-indicators {
-
     display: flex;
-
     justify-content: center;
-
     gap: 8px;
-
     margin-bottom: 15px;
-
 }
-
-
 
 .indicator {
-
     width: 8px;
-
     height: 8px;
-
     background: #cbd5e1;
-
     border-radius: 50%;
-
     transition: all 0.3s ease;
-
 }
-
-
 
 .indicator.active {
-
     background: #2563eb;
-
     width: 22px;
-
     border-radius: 4px;
-
 }
-
