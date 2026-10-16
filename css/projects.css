@@ -318,14 +318,13 @@
     justify-content: center;
 }
 
-/* 3. Se adapta a cualquier proporción (cuadrada, vertical u horizontal) sin recortes */
+/* 3. Se adapta perfectamente al ancho y alto sin salirse ni recortarse */
 .carousel-img {
     display: none;
-    width: auto;
-    max-width: 100%;
-    height: auto;
-    max-height: 70vh;
-    object-fit: contain;
+    width: 100% !important;     /* Fuerza a ocupar el ancho exacto del contenedor */
+    height: auto !important;    /* Mantiene la proporción de altura automáticamente */
+    max-height: 65vh;           /* Evita que sea más alta que la pantalla */
+    object-fit: contain;        /* Muestra toda la imagen completa */
     border-radius: 8px;
     margin: 0 auto;
 }
